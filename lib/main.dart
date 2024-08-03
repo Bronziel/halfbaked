@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halfbaked/pages/view_recipe.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,11 +26,29 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('HalfBaked'),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ViewRecipe(),
+                  ));
+            },
+            child: const Text('View Recipe'),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('Create Recipe'),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('Component Builder'),
+          ),
         ],
       ),
     );
