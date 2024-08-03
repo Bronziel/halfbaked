@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:halfbaked/pages/view_recipe.dart';
+import 'package:halfbaked/pages/viewRecipe/view_recipe.dart';
 
 void main() {
   runApp(const MyApp());
