@@ -8,9 +8,9 @@ class ViewRecipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool mobileScreen = 600 < MediaQuery.sizeOf(context).width;
-    bool ipadScreen = 1400 < MediaQuery.sizeOf(context).width;
-    bool desktopScreen = 1400 > MediaQuery.sizeOf(context).width;
+    bool mobileScreen = 600 > MediaQuery.sizeOf(context).width;
+    bool ipadScreen = 1400 > MediaQuery.sizeOf(context).width;
+    bool desktopScreen = 1400 < MediaQuery.sizeOf(context).width;
 
     if (mobileScreen) {
       return MobileBody(child: Container());
