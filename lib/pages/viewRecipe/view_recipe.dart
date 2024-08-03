@@ -13,11 +13,185 @@ class ViewRecipe extends StatelessWidget {
     bool desktopScreen = 1400 < MediaQuery.sizeOf(context).width;
 
     if (mobileScreen) {
-      return MobileBody(child: Container());
+      return const MobileBody(child: MobileRecipe());
     } else if (ipadScreen) {
-      return IpadBody(child: Container());
+      return const IpadBody(child: IpadRecipe());
     } else {
-      return DesktopBody(child: Container());
+      return const DesktopBody(child: DesktopRecipe());
     }
+  }
+}
+
+class MobileRecipe extends StatelessWidget {
+  const MobileRecipe({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          Boxcheck(),
+          Boxcheck(),
+          Boxcheck(),
+          Boxcheck(),
+        ],
+      ),
+    );
+  }
+}
+
+class Boxcheck extends StatelessWidget {
+  const Boxcheck({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: SizedBox(
+        height: 300,
+        width: double.infinity,
+        child: Card(
+          color: Colors.blue,
+        ),
+      ),
+    );
+  }
+}
+
+class IpadRecipe extends StatelessWidget {
+  const IpadRecipe({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      children: [
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.red,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.green,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.amber,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class DesktopRecipe extends StatelessWidget {
+  const DesktopRecipe({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      children: [
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.red,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.green,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: double.infinity,
+                    child: Card(
+                      color: Colors.amber,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
+      ],
+    );
   }
 }
