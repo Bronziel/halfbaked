@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:halfbaked/addaptive/desktop_body.dart';
 import 'package:halfbaked/addaptive/ipad_body.dart';
 import 'package:halfbaked/addaptive/mobile_body.dart';
+import 'package:halfbaked/components/carousell/caro_mobile.dart';
 
 class ViewRecipe extends StatelessWidget {
   const ViewRecipe({super.key});
@@ -30,7 +31,7 @@ class MobileRecipe extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         children: [
-          Boxcheck(),
+          CaroMobile(),
           Boxcheck(),
           Boxcheck(),
           Boxcheck(),
