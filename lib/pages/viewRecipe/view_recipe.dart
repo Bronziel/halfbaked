@@ -3,6 +3,7 @@ import 'package:halfbaked/addaptive/desktop_body.dart';
 import 'package:halfbaked/addaptive/ipad_body.dart';
 import 'package:halfbaked/addaptive/mobile_body.dart';
 import 'package:halfbaked/components/carousell/caro_mobile.dart';
+import 'package:halfbaked/components/info_box/info_mobile.dart';
 
 class ViewRecipe extends StatelessWidget {
   const ViewRecipe({super.key});
@@ -32,7 +33,7 @@ class MobileRecipe extends StatelessWidget {
       child: Column(
         children: [
           CaroMobile(),
-          Boxcheck(),
+          Intro(),
           Boxcheck(),
           Boxcheck(),
         ],
