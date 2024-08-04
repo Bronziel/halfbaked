@@ -21,7 +21,7 @@ class CaroMobile extends StatelessWidget {
             number: '3',
           )
         ],
-        options: CarouselOptions(),
+        options: CarouselOptions(height: double.infinity),
       ),
     );
   }
@@ -37,8 +37,6 @@ class CaroItemMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
-      width: double.infinity,
       child: Card(
         color: Colors.amber,
         child: Center(
