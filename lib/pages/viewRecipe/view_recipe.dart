@@ -14,7 +14,7 @@ class ViewRecipe extends StatelessWidget {
     //bool desktopScreen = 1400 < MediaQuery.sizeOf(context).width;
 
     if (mobileScreen) {
-      return const MobileBody(child: MobileRecipe());
+      return const MobileBody(appBarTitle: 'Kebabrulle',child: MobileRecipe());
     } else if (ipadScreen) {
       return const IpadBody(child: IpadRecipe());
     } else {
