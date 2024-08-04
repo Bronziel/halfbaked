@@ -10,7 +10,7 @@ class Intro extends StatelessWidget {
       padding:  const EdgeInsets.all(8.0),
       child: SizedBox(
         width: double.infinity,
-        height: 400,
+        
         child: Card(
           color:const Color(0xFF161414) ,
           child: Column(
@@ -25,7 +25,7 @@ class Intro extends StatelessWidget {
                       ),
                   ),
                 ),
-               const Expanded(child:  SizedBox( 
+               const SizedBox( 
                   child:  Padding(
                     padding:  EdgeInsets.only(bottom: 15.0,left: 15,right: 15),
                     child: Align(
@@ -35,14 +35,92 @@ class Intro extends StatelessWidget {
                       ),
                   ),
                 ),
-              ),
               Container(
+                child: const Column(children: [
+                  PortionSizeCard(),
+                   PreppTimeCard(),
+                   TotalTimeCard()
+         
+                  
+                ],),
 
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class PortionSizeCard extends StatelessWidget {
+  const PortionSizeCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.only(left: 5.0, right: 5),
+      child: SizedBox(
+       width: double.infinity,
+       height: 58,
+       child: Card(color: Color(0xffd9d9d9),child: Row(children: [
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text('PortionSize:',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+        ),
+        Text('15', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),)
+       ],),),
+                        ),
+    );
+  }
+}
+
+class PreppTimeCard extends StatelessWidget {
+  const PreppTimeCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.only(left: 5.0, right: 5),
+      child: SizedBox(
+       width: double.infinity,
+       height: 58,
+       child: Card(color: Color(0xffd9d9d9),child: Row(children: [
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text('Prep Time:',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+        ),
+        Text('300min', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),)
+       ],),),
+                        ),
+    );
+  }
+}
+
+class TotalTimeCard extends StatelessWidget {
+  const TotalTimeCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.only(left: 5.0, right: 5,bottom: 8),
+      child: SizedBox(
+       width: double.infinity,
+       height: 58,
+       child: Card(color: Color(0xffd9d9d9),child: Row(children: [
+        Padding(
+          padding: EdgeInsets.all(8),
+          child: Text('Total Time:',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
+        ),
+        Text('450min', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),)
+       ],),),
+                        ),
     );
   }
 }
