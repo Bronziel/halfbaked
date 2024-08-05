@@ -30,6 +30,7 @@ class IngMobile extends StatelessWidget {
               ),
             ),
             SizedBox(
+              //ing should be multiple with portion size
               //add math for container+ list items *amount = heigh
               //not for listview since it is only list item*amount height
               height: 150,
