@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+//dont use listview for iphone since single scrolll is what we are doing anywya.
+//time card dont loook great
+//sohudl you put prep and totla time in one tile abouve title?? feels like title should be at top.
+//no tab bar insted floatig back button with ´
 class MobileBody extends StatelessWidget {
   final String appBarTitle;
   final Widget child;
@@ -13,7 +17,10 @@ class MobileBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text(appBarTitle,style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+        title: Text(
+          appBarTitle,
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
       ),
       body: child,
     );
