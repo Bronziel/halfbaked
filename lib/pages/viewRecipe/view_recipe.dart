@@ -5,6 +5,7 @@ import 'package:halfbaked/addaptive/mobile_body.dart';
 import 'package:halfbaked/components/carousell/caro_mobile.dart';
 import 'package:halfbaked/components/info_box/info_mobile.dart';
 import 'package:halfbaked/components/ingridients/ing_mobile.dart';
+import 'package:halfbaked/components/steps/steps_mobile.dart';
 
 class ViewRecipe extends StatelessWidget {
   const ViewRecipe({super.key});
@@ -36,7 +37,7 @@ class MobileRecipe extends StatelessWidget {
           CaroMobile(),
           Intro(),
           IngMobile(),
-          Boxcheck(),
+          StepsMobile(),
         ],
       ),
     );

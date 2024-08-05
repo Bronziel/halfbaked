@@ -1,0 +1,7 @@
+dont use carousell builder for displaying static recipes
+
+no images when cooking multiple recipes split screen when using 2 recipes
+if you go half screen and cooking option to swithc between one recipes
+or split screen
+
+how is there minimu screen size for the chrome on is it jusr chrome or is it my app
