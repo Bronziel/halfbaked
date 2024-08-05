@@ -13,9 +13,22 @@ class IngMobile extends StatelessWidget {
         child: Column(
           children: [
             Container(
+              decoration: const BoxDecoration(
+                  color: Color(0xFFD9D9D9),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      topRight: Radius.circular(5))),
               width: double.infinity,
-              height: 100,
-              color: Colors.blue,
+              height: 50,
+              child: const Center(
+                child: Text(
+                  'Ingridients',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
             SizedBox(
               height: 300,
@@ -23,18 +36,52 @@ class IngMobile extends StatelessWidget {
                 children: [
                   Container(
                     width: double.infinity,
-                    height: 100,
-                    color: Colors.amber,
+                    height: 50,
+                    color: const Color(0xff161414),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'KebabKött: 500g',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                   Container(
                     width: double.infinity,
-                    height: 100,
-                    color: Colors.amber,
+                    height: 50,
+                    color: const Color(0xff161414),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'KebabKött: 500g',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                   Container(
                     width: double.infinity,
-                    height: 100,
-                    color: Colors.amber,
+                    height: 50,
+                    decoration: const BoxDecoration(
+                        color: Color(0xff161414),
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(5),
+                            bottomLeft: Radius.circular(5))),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'KebabKött: 500g',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                 ],
               ),
