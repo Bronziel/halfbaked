@@ -74,28 +74,8 @@ class IpadRecipe extends StatelessWidget {
         Expanded(
           child: Row(
             children: [
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: double.infinity,
-                    child: Card(
-                      color: Colors.red,
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: double.infinity,
-                    child: Card(
-                      color: Colors.blue,
-                    ),
-                  ),
-                ),
-              ),
+              Expanded(child: Intro()),
+              Expanded(child: CaroMobile()),
             ],
           ),
         ),
@@ -103,26 +83,10 @@ class IpadRecipe extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: double.infinity,
-                    child: Card(
-                      color: Colors.green,
-                    ),
-                  ),
-                ),
+                child: IngMobile(),
               ),
               Expanded(
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: double.infinity,
-                    child: Card(
-                      color: Colors.amber,
-                    ),
-                  ),
-                ),
+                child: StepsMobile(),
               ),
             ],
           ),
