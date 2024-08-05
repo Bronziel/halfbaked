@@ -4,6 +4,7 @@ import 'package:halfbaked/addaptive/ipad_body.dart';
 import 'package:halfbaked/addaptive/mobile_body.dart';
 import 'package:halfbaked/components/carousell/caro_mobile.dart';
 import 'package:halfbaked/components/info_box/info_mobile.dart';
+import 'package:halfbaked/components/ingridients/ing_mobile.dart';
 
 class ViewRecipe extends StatelessWidget {
   const ViewRecipe({super.key});
@@ -15,7 +16,7 @@ class ViewRecipe extends StatelessWidget {
     //bool desktopScreen = 1400 < MediaQuery.sizeOf(context).width;
 
     if (mobileScreen) {
-      return const MobileBody(appBarTitle: 'Kebabrulle',child: MobileRecipe());
+      return const MobileBody(appBarTitle: 'Kebabrulle', child: MobileRecipe());
     } else if (ipadScreen) {
       return const IpadBody(child: IpadRecipe());
     } else {
@@ -34,7 +35,7 @@ class MobileRecipe extends StatelessWidget {
         children: [
           CaroMobile(),
           Intro(),
-          Boxcheck(),
+          IngMobile(),
           Boxcheck(),
         ],
       ),
