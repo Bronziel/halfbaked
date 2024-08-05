@@ -13,6 +13,60 @@ class Intro extends StatelessWidget {
           color: const Color(0xFF161414),
           child: Column(
             children: [
+              Container(
+                width: double.infinity,
+                height: 60,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10)),
+                  color: Color(0xffd9d9d9),
+                ),
+                child: const Expanded(
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        child: Row(
+                          children: [],
+                        ),
+                      ),
+                      SizedBox(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(Icons.schedule),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Total:',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 24),
+                        ),
+                      ),
+                      SizedBox(
+                        child: Center(
+                          child: Text(
+                            '450min',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 24),
+                          ),
+                        ),
+                      ),
+                      //second half
+                      SizedBox(
+                        child: Center(
+                          child: Text(
+                            '15',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 24),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               const SizedBox(
                 child: Padding(
                   padding: EdgeInsets.only(top: 10, bottom: 1, left: 15),
@@ -44,6 +98,7 @@ class Intro extends StatelessWidget {
                 ),
               ),
               Container(
+                width: double.infinity,
                 child: const Column(
                   children: [
                     PortionSizeCard(),
@@ -52,6 +107,82 @@ class Intro extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                width: double.infinity,
+                height: 100,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: SizedBox(
+                              height: 50,
+                              child: Card(
+                                child: Center(
+                                    child: Text(
+                                  'Chicken',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24),
+                                )),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: SizedBox(
+                              height: 50,
+                              child: Card(
+                                child: Center(
+                                    child: Text(
+                                  'Chicken',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24),
+                                )),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: SizedBox(
+                              height: 50,
+                              child: Card(
+                                child: Center(
+                                    child: Text(
+                                  'Chicken',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24),
+                                )),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: SizedBox(
+                              height: 50,
+                              child: Card(
+                                child: Center(
+                                    child: Text(
+                                  'Chicken',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24),
+                                )),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
