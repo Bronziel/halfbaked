@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:halfbaked/addaptive/desktop_body.dart';
 import 'package:halfbaked/addaptive/ipad_body.dart';
 import 'package:halfbaked/addaptive/mobile_body.dart';
+import 'package:halfbaked/components/carousell/caro_ipad.dart';
 import 'package:halfbaked/components/carousell/caro_mobile.dart';
 import 'package:halfbaked/components/info_box/info_ipad.dart';
 import 'package:halfbaked/components/info_box/info_mobile.dart';
+import 'package:halfbaked/components/ingridients/ing_ipad.dart';
 import 'package:halfbaked/components/ingridients/ing_mobile.dart';
+import 'package:halfbaked/components/steps/steps_ipad.dart';
 import 'package:halfbaked/components/steps/steps_mobile.dart';
 
 import '../../components/equipment/equip_mobile.dart';
@@ -79,7 +82,7 @@ class IpadRecipe extends StatelessWidget {
           child: Row(
             children: [
               Expanded(child: IntroIpad()),
-              Expanded(child: CaroMobile()),
+              Expanded(child: CaroIpad()),
             ],
           ),
         ),
@@ -87,10 +90,10 @@ class IpadRecipe extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: IngMobile(),
+                child: IngIpad(),
               ),
               Expanded(
-                child: StepsMobile(),
+                child: StepsIpad(),
               ),
             ],
           ),
