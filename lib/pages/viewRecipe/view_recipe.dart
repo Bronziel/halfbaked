@@ -3,6 +3,7 @@ import 'package:halfbaked/addaptive/desktop_body.dart';
 import 'package:halfbaked/addaptive/ipad_body.dart';
 import 'package:halfbaked/addaptive/mobile_body.dart';
 import 'package:halfbaked/components/carousell/caro_mobile.dart';
+import 'package:halfbaked/components/info_box/info_ipad.dart';
 import 'package:halfbaked/components/info_box/info_mobile.dart';
 import 'package:halfbaked/components/ingridients/ing_mobile.dart';
 import 'package:halfbaked/components/steps/steps_mobile.dart';
@@ -37,7 +38,7 @@ class MobileRecipe extends StatelessWidget {
       child: Column(
         children: [
           CaroMobile(),
-          Intro(),
+          IntroMobile(),
           IngMobile(),
           EquipMobile(),
           StepsMobile(),
@@ -77,7 +78,7 @@ class IpadRecipe extends StatelessWidget {
         Expanded(
           child: Row(
             children: [
-              Expanded(child: Intro()),
+              Expanded(child: IntroIpad()),
               Expanded(child: CaroMobile()),
             ],
           ),

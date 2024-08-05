@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class IntroMobile extends StatelessWidget {
-  const IntroMobile({super.key});
+class IntroIpad extends StatelessWidget {
+  const IntroIpad({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -130,6 +130,16 @@ class IntroMobile extends StatelessWidget {
                   ),
                 ),
               ),
+              Container(
+                width: double.infinity,
+                child: const Column(
+                  children: [
+                    PortionSizeCardIpad(),
+                    PreppTimeCardIpad(),
+                    TotalTimeCardIpad()
+                  ],
+                ),
+              ),
               const SizedBox(
                 width: double.infinity,
                 height: 100,
@@ -214,8 +224,8 @@ class IntroMobile extends StatelessWidget {
   }
 }
 
-class PortionSizeCard extends StatelessWidget {
-  const PortionSizeCard({
+class PortionSizeCardIpad extends StatelessWidget {
+  const PortionSizeCardIpad({
     super.key,
   });
 
@@ -249,8 +259,8 @@ class PortionSizeCard extends StatelessWidget {
   }
 }
 
-class PreppTimeCard extends StatelessWidget {
-  const PreppTimeCard({
+class PreppTimeCardIpad extends StatelessWidget {
+  const PreppTimeCardIpad({
     super.key,
   });
 
@@ -284,8 +294,8 @@ class PreppTimeCard extends StatelessWidget {
   }
 }
 
-class TotalTimeCard extends StatelessWidget {
-  const TotalTimeCard({
+class TotalTimeCardIpad extends StatelessWidget {
+  const TotalTimeCardIpad({
     super.key,
   });
 
