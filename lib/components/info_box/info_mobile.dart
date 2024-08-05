@@ -25,41 +25,74 @@ class Intro extends StatelessWidget {
                 child: const Expanded(
                   child: Row(
                     children: [
-                      SizedBox(
-                        child: Row(
-                          children: [],
-                        ),
-                      ),
-                      SizedBox(
-                        child: Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Icon(Icons.schedule),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'Total:',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 24),
-                        ),
-                      ),
-                      SizedBox(
-                        child: Center(
-                          child: Text(
-                            '450min',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 24),
+                      Expanded(
+                        child: SizedBox(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                child: Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Icon(Icons.schedule),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Prepp:',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24),
+                                ),
+                              ),
+                              SizedBox(
+                                child: Center(
+                                  child: Text(
+                                    '150min',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 22),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
+                      VerticalDivider(
+                        color: Colors.grey,
+                      ),
+
                       //second half
-                      SizedBox(
-                        child: Center(
-                          child: Text(
-                            '15',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 24),
+                      Expanded(
+                        child: SizedBox(
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                child: Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Icon(Icons.schedule),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Total:',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24),
+                                ),
+                              ),
+                              SizedBox(
+                                child: Center(
+                                  child: Text(
+                                    '450min',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 22),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
