@@ -9,7 +9,6 @@ class IngMobile extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: SizedBox(
         width: double.infinity,
-        height: 400,
         child: Column(
           children: [
             Container(
@@ -31,7 +30,9 @@ class IngMobile extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 300,
+              //add math for container+ list items *amount = heigh
+              //not for listview since it is only list item*amount height
+              height: 150,
               child: ListView(
                 children: [
                   Container(
