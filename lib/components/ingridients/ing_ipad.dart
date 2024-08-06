@@ -145,7 +145,11 @@ class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackIpad> {
       child: IndexedStack(
       index: newIndex,
       children:  [
-        IngIpad(right: updateIndex,),EquipIpad(right: updateIndex,),
+        GestureDetector(
+          onHorizontalDragStart: (left) => updateIndex(true),
+          
+          child: IngIpad(right: updateIndex,),),
+        EquipIpad(right: updateIndex,),
       ],),
     );
   }
