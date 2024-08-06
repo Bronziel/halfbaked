@@ -134,23 +134,20 @@ class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackMobile>
   }
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      child: SizedBox(
-        height: double.infinity,
-        width: double.infinity,
-        child: PageView(
-          controller: controller,
-          onPageChanged: (index) {
-            setState(() {
-              index = newIndex;
-            });
-          },
-          children: [
-          IngMobile(/*right: updateIndex*/),
-          EquipMobile(/*right: updateIndex*/)
-
-        ],)
-      ),
+    return  SizedBox(
+      height: 250,
+      width: double.infinity,
+      child: PageView(
+        controller: controller,
+        onPageChanged: (index) {
+          setState(() {
+            index = newIndex;
+          });
+        },
+        children: const [
+        IngMobile(/*right: updateIndex*/),
+        EquipMobile(/*right: updateIndex*/)
+      ],)
     );
   }
 }
