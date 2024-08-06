@@ -42,6 +42,7 @@ class MobileRecipe extends StatelessWidget {
         children: [
           CaroMobile(),
           IntroMobile(),
+          PortionSizeCardMobile(),
           IngMobile(),
           EquipMobile(),
           StepsMobile(),

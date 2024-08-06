@@ -214,33 +214,46 @@ class IntroMobile extends StatelessWidget {
   }
 }
 
-class PortionSizeCard extends StatelessWidget {
-  const PortionSizeCard({
+class PortionSizeCardMobile extends StatelessWidget {
+  const PortionSizeCardMobile({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(left: 5.0, right: 5),
+    return Padding(
+      padding: const EdgeInsets.only(left: 5.0, right: 5),
       child: SizedBox(
         width: double.infinity,
         height: 58,
         child: Card(
-          color: Color(0xffd9d9d9),
+          color: const Color(0xffd9d9d9),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'PortionSize:',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              SizedBox(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: IconButton(
+                      onPressed: () {}, icon: const Icon(Icons.remove)),
                 ),
               ),
-              Text(
-                '15',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              )
+              const SizedBox(
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    '15',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              SizedBox(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child:
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.add)),
+                ),
+              ),
             ],
           ),
         ),

@@ -74,13 +74,15 @@ class _StepsMobileState extends State<StepsMobile> {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            width: 350,
-                            child: Text(
-                              softWrap: true,
-                              'Börja med att skära upp salladshuvudet. För att sedan sätta det i en plast bunke',
-                              style: TextStyle(
-                                fontSize: 20,
+                          Expanded(
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: Text(
+                                softWrap: true,
+                                'Börja med att skära upp salladshuvudet. För att sedan sätta det i en plast bunke',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
                           ),
