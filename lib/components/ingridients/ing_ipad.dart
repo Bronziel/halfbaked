@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:halfbaked/components/equipment/equip_ipad.dart';
 
 class IngIpad extends StatelessWidget {
-  const IngIpad({super.key});
+  final Function(bool) right;
+  const IngIpad({super.key, required this.right});
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +21,21 @@ class IngIpad extends StatelessWidget {
                       topRight: Radius.circular(5))),
               width: double.infinity,
               height: 50,
-              child: const Center(
-                child: Text(
-                  'Ingridients',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(onPressed: () => right(false), 
+                   icon: const Icon(Icons.chevron_left)),
+                   const Text(
+                     'Ingridients',
+                     style: TextStyle(
+                         color: Colors.black,
+                         fontSize: 20,
+                         fontWeight: FontWeight.bold),
+                   ),
+                    IconButton(onPressed: () => right(true), 
+                   icon: const Icon(Icons.chevron_right)),
+                ],
               ),
             ),
             SizedBox(
@@ -107,20 +115,26 @@ class IngAndEquipIndexStackIpad extends StatefulWidget {
 }
 
 class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackIpad> {
-  int newIndex = 1;
+  int newIndex = 0;
   updateIndex(bool update){
+    print('current index $newIndex');
     setState(() {
       if(update){
         if(newIndex == 1){
           newIndex = 0;
+          print('new index: $newIndex');
         }else{
-          newIndex+1;
+          
+           newIndex= newIndex + 1;
+         
+          
+          print('new index should be 1, actual index: $newIndex');
         }
       }else{
         if(newIndex == 0){
           newIndex = 1;
         }else{
-          newIndex-1;
+         newIndex= newIndex-1;
         }
       }
     });
@@ -130,8 +144,8 @@ class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackIpad> {
     return  SizedBox(
       child: IndexedStack(
       index: newIndex,
-      children: const [
-        IngIpad(),EquipIpad(),
+      children:  [
+        IngIpad(right: updateIndex,),EquipIpad(right: updateIndex,),
       ],),
     );
   }

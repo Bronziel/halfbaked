@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 // give opption to check rest of ingridentns and add ¨he res to a shopping list
 
 class EquipIpad extends StatelessWidget {
-  const EquipIpad({super.key});
+  final Function(bool) right;
+  const EquipIpad({super.key, required this.right});
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +23,21 @@ class EquipIpad extends StatelessWidget {
                       topRight: Radius.circular(5))),
               width: double.infinity,
               height: 50,
-              child: const Center(
-                child: Text(
-                  'Equipment',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                   IconButton(onPressed: () => right(false), 
+                   icon: const Icon(Icons.chevron_left)),
+                  const Text(
+                    'Equipment',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                   IconButton(onPressed: () => right(true), 
+                   icon: const Icon(Icons.chevron_right)),
+                ],
               ),
             ),
             SizedBox(
