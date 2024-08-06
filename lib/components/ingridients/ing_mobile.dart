@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:halfbaked/components/equipment/equip_ipad.dart';
+import 'package:halfbaked/components/equipment/equip_mobile.dart';
 
 class IngMobile extends StatelessWidget {
   const IngMobile({super.key});
@@ -94,3 +96,71 @@ class IngMobile extends StatelessWidget {
     );
   }
 }
+
+
+class IngAndEquipIndexStackMobile extends StatefulWidget {
+  const IngAndEquipIndexStackMobile({super.key});
+
+  @override
+  State<IngAndEquipIndexStackMobile> createState() => _IngAndEquipIndexStackIpadState();
+}
+
+class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackMobile> {
+  int newIndex = 0;
+  final controller = PageController(
+    initialPage: 0 
+  );
+
+  updateIndex(bool update){
+    setState(() {
+      if(update){
+        if(newIndex == 1){
+          newIndex = 0;
+          controller.jumpToPage(newIndex);
+        }else{
+           newIndex= newIndex + 1;  
+           controller.jumpToPage(newIndex);
+        }
+      }else{
+        if(newIndex == 0){
+          newIndex = 1;
+          controller.jumpToPage(newIndex);
+        }else{
+         newIndex= newIndex-1;
+         controller.jumpToPage(newIndex);
+        }
+      }
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return  Expanded(
+      child: SizedBox(
+        height: double.infinity,
+        width: double.infinity,
+        child: PageView(
+          controller: controller,
+          onPageChanged: (index) {
+            setState(() {
+              index = newIndex;
+            });
+          },
+          children: [
+          IngMobile(/*right: updateIndex*/),
+          EquipMobile(/*right: updateIndex*/)
+
+        ],)
+      ),
+    );
+  }
+}
+
+//IndexedStack(
+   /*   index: newIndex,
+      children:  [
+        GestureDetector(
+          onHorizontalDragStart: (left) => updateIndex(true),
+          
+          child: IngIpad(right: updateIndex,),),
+        EquipIpad(right: updateIndex,),
+      ],),*/

@@ -136,8 +136,7 @@ class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackIpad> {
           controller.jumpToPage(newIndex);
         }else{
          newIndex= newIndex-1;
-         controller.jumpToPage(newIndex);
-        }
+         controller.jumpToPage(newIndex);        }
       }
     });
   }

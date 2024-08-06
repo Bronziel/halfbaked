@@ -21,6 +21,7 @@ class ViewRecipe extends StatelessWidget {
     bool mobileScreen = 600 > MediaQuery.sizeOf(context).width;
     bool ipadScreen = 1400 > MediaQuery.sizeOf(context).width;
     //bool desktopScreen = 1400 < MediaQuery.sizeOf(context).width;
+    //more options for medium sized recipes maybe
 
     if (mobileScreen) {
       return const MobileBody(appBarTitle: 'Kebabrulle', child: MobileRecipe());
@@ -43,8 +44,7 @@ class MobileRecipe extends StatelessWidget {
           CaroMobile(),
           IntroMobile(),
           PortionSizeCardMobile(),
-          IngMobile(),
-          EquipMobile(),
+          IngAndEquipIndexStackMobile(),
           StepsMobile(),
         ],
       ),
