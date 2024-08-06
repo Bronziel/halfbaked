@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halfbaked/components/equipment/equip_ipad.dart';
 
 class IngIpad extends StatelessWidget {
   const IngIpad({super.key});
@@ -91,6 +92,47 @@ class IngIpad extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+//try to combine ing and equp
+//add chevron left right for ing and equip title card
+
+class IngAndEquipIndexStackIpad extends StatefulWidget {
+  const IngAndEquipIndexStackIpad({super.key});
+
+  @override
+  State<IngAndEquipIndexStackIpad> createState() => _IngAndEquipIndexStackIpadState();
+}
+
+class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackIpad> {
+  int newIndex = 1;
+  updateIndex(bool update){
+    setState(() {
+      if(update){
+        if(newIndex == 1){
+          newIndex = 0;
+        }else{
+          newIndex+1;
+        }
+      }else{
+        if(newIndex == 0){
+          newIndex = 1;
+        }else{
+          newIndex-1;
+        }
+      }
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return  SizedBox(
+      child: IndexedStack(
+      index: newIndex,
+      children: const [
+        IngIpad(),EquipIpad(),
+      ],),
     );
   }
 }
