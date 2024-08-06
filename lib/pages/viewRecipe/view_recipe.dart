@@ -11,8 +11,6 @@ import 'package:halfbaked/components/ingridients/ing_mobile.dart';
 import 'package:halfbaked/components/steps/steps_ipad.dart';
 import 'package:halfbaked/components/steps/steps_mobile.dart';
 
-import '../../components/equipment/equip_mobile.dart';
-
 class ViewRecipe extends StatelessWidget {
   const ViewRecipe({super.key});
 
