@@ -35,14 +35,11 @@ class IntroMobile extends StatelessWidget {
                                   child: Icon(Icons.schedule),
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Prepp:',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
-                                ),
+                              Text(
+                                'Prepp:',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
                               ),
                               SizedBox(
                                 child: Center(
@@ -73,14 +70,11 @@ class IntroMobile extends StatelessWidget {
                                   child: Icon(Icons.schedule),
                                 ),
                               ),
-                              Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Total:',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
-                                ),
+                              Text(
+                                'Total:',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
                               ),
                               SizedBox(
                                 child: Center(
