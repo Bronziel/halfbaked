@@ -43,11 +43,11 @@ class _StepsMobileState extends State<StepsMobile> {
               width: double.infinity,
               height: 340,
               child: ListView(
-                children: [
-                  Container(
+                children: const [
+                   SizedBox(
                     height: 50,
                     width: double.infinity,
-                    child: const Padding(
+                    child:  Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
                         'Prepp',
@@ -58,9 +58,9 @@ class _StepsMobileState extends State<StepsMobile> {
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
-                    child: const Padding(
+                    child:  Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [

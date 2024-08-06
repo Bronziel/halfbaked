@@ -130,9 +130,9 @@ class IntroIpad extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
+              const SizedBox(
                 width: double.infinity,
-                child: const Column(
+                child:  Column(
                   children: [
                     PortionSizeCardIpad(),
                     PreppTimeCardIpad(),
