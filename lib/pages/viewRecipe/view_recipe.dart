@@ -82,7 +82,7 @@ class IpadRecipe extends StatelessWidget {
         Expanded(
           child: Row(
             children: [
-              Expanded(child: IntroIpad()),
+              IntroIpad(),
               Expanded(child: CaroIpad()),
             ],
           ),
