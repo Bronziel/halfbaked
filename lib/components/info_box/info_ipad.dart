@@ -47,15 +47,7 @@ class IntroIpad extends StatelessWidget {
                   ),
                 ),
                 TimecardCombinedIpad(),
-                 SizedBox(
-                  width: double.infinity,
-                  child:  Column(
-                    children: [
-                      PreppTimeCardIpad(),
-                      TotalTimeCardIpad()
-                    ],
-                  ),
-                ),
+                
                  SizedBox(
                   width: double.infinity,
                   height: 100,
