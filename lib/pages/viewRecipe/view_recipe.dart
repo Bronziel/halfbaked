@@ -99,6 +99,7 @@ class IpadRecipe extends StatelessWidget {
                 ),
               ),
               Expanded(
+                flex: 2,
                 child: StepsIpad(),
               ),
             ],
