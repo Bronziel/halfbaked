@@ -41,7 +41,7 @@ class IntroMobile extends StatelessWidget {
                                   'Prepp:',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 20),
                                 ),
                               ),
                               SizedBox(
@@ -50,7 +50,7 @@ class IntroMobile extends StatelessWidget {
                                     '150min',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 22),
+                                        fontSize: 18),
                                   ),
                                 ),
                               ),
@@ -79,7 +79,7 @@ class IntroMobile extends StatelessWidget {
                                   'Total:',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 20),
                                 ),
                               ),
                               SizedBox(
@@ -88,7 +88,7 @@ class IntroMobile extends StatelessWidget {
                                     '450min',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 22),
+                                        fontSize: 18),
                                   ),
                                 ),
                               ),
@@ -124,7 +124,7 @@ class IntroMobile extends StatelessWidget {
                       'En god Kebabrulle som aldrig gör en besviken.',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 24,
+                        fontSize: 20,
                       ),
                     ),
                   ),
@@ -147,7 +147,7 @@ class IntroMobile extends StatelessWidget {
                                   'Chicken',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 20),
                                 )),
                               ),
                             ),
@@ -161,7 +161,7 @@ class IntroMobile extends StatelessWidget {
                                   'Chicken',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 20),
                                 )),
                               ),
                             ),
@@ -181,7 +181,7 @@ class IntroMobile extends StatelessWidget {
                                   'Chicken',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 20),
                                 )),
                               ),
                             ),
@@ -195,7 +195,7 @@ class IntroMobile extends StatelessWidget {
                                   'Chicken',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 20),
                                 )),
                               ),
                             ),
