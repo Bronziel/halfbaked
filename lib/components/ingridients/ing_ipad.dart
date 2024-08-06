@@ -116,41 +116,61 @@ class IngAndEquipIndexStackIpad extends StatefulWidget {
 
 class _IngAndEquipIndexStackIpadState extends State<IngAndEquipIndexStackIpad> {
   int newIndex = 0;
+  final controller = PageController(
+    initialPage: 0 
+  );
+
   updateIndex(bool update){
-    print('current index $newIndex');
     setState(() {
       if(update){
         if(newIndex == 1){
           newIndex = 0;
-          print('new index: $newIndex');
+          controller.jumpToPage(newIndex);
         }else{
-          
-           newIndex= newIndex + 1;
-         
-          
-          print('new index should be 1, actual index: $newIndex');
+           newIndex= newIndex + 1;  
+           controller.jumpToPage(newIndex);
         }
       }else{
         if(newIndex == 0){
           newIndex = 1;
+          controller.jumpToPage(newIndex);
         }else{
          newIndex= newIndex-1;
+         controller.jumpToPage(newIndex);
         }
       }
     });
   }
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
-      child: IndexedStack(
-      index: newIndex,
+    return  Expanded(
+      child: SizedBox(
+        height: double.infinity,
+        width: double.infinity,
+        child: PageView(
+          controller: controller,
+          onPageChanged: (index) {
+            setState(() {
+              index = newIndex;
+            });
+            
+          },
+          children: [
+          IngIpad(right: updateIndex),
+          EquipIpad(right: updateIndex)
+
+        ],)
+      ),
+    );
+  }
+}
+
+//IndexedStack(
+   /*   index: newIndex,
       children:  [
         GestureDetector(
           onHorizontalDragStart: (left) => updateIndex(true),
           
           child: IngIpad(right: updateIndex,),),
         EquipIpad(right: updateIndex,),
-      ],),
-    );
-  }
-}
+      ],),*/
