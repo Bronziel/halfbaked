@@ -7,7 +7,7 @@ class CaroIpad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400,
+      height: double.infinity,
       width: double.infinity,
       child: CarouselSlider(
         items: [
@@ -16,7 +16,7 @@ class CaroIpad extends StatelessWidget {
           CaroItemImageIpad(number: imagePathlistIpad[2].imagePath),
           CaroItemImageIpad(number: imagePathlistIpad[3].imagePath),
         ],
-        options: CarouselOptions(height: double.infinity),
+        options: CarouselOptions(height: double.infinity,autoPlay: true),
       ),
     );
   }

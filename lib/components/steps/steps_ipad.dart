@@ -17,7 +17,7 @@ class _StepsIpadState extends State<StepsIpad> {
             color: Color(0xffd9d9d9),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         width: double.infinity,
-        height: 400,
+        height: double.infinity,
         child: Column(
           children: [
             Container(
