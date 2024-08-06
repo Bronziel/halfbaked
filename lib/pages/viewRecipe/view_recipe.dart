@@ -91,7 +91,12 @@ class IpadRecipe extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: IngIpad(),
+                child: Column(
+                  children: [
+                    PortionSizeCardMobile(),
+                    IngIpad(),
+                  ],
+                ),
               ),
               Expanded(
                 child: StepsIpad(),
