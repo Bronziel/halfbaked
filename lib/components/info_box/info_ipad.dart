@@ -15,121 +15,130 @@ class IntroIpad extends StatelessWidget {
             color:  Color(0xFF161414),
             child: Column(
               children: [
-                
-                 SizedBox(
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 1, left: 15),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        'Kebabrulle:',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  child: Padding(
-                    padding: EdgeInsets.only(bottom: 15.0, left: 15, right: 15),
-                    child: Align(
-                      alignment: Alignment.topCenter,
-                      child: Text(
-                        'En god Kebabrulle som aldrig gör en besviken.',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                TitleIpad(),
+                DescriptionIpad(),
                 TimecardCombinedIpad(),
-                
-                 SizedBox(
-                  width: double.infinity,
-                  height: 100,
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: SizedBox(
-                                height: 50,
-                                child: Card(
-                                  child: Center(
-                                      child: Text(
-                                    'Chicken',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 24),
-                                  )),
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: SizedBox(
-                                height: 50,
-                                child: Card(
-                                  child: Center(
-                                      child: Text(
-                                    'Chicken',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 24),
-                                  )),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: SizedBox(
-                                height: 50,
-                                child: Card(
-                                  child: Center(
-                                      child: Text(
-                                    'Chicken',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 24),
-                                  )),
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: SizedBox(
-                                height: 50,
-                                child: Card(
-                                  child: Center(
-                                      child: Text(
-                                    'Chicken',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 24),
-                                  )),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                )
+                 TagIpad()
               ],
             ),
           ),
         ),
       ),
     );
+  }
+}
+
+class TagIpad extends StatelessWidget {
+  const TagIpad({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+     width: double.infinity,
+     height: 100,
+     child: Column(
+       children: [
+         Expanded(
+           child: Row(
+             children: [
+               Expanded(
+                 child: TagChickenIpad(),
+               ),
+               Expanded(
+                 child: TagChickenIpad(),
+               ),
+             ],
+           ),
+         ),
+         Expanded(
+           child: Row(
+             children: [
+               Expanded(
+                 child: TagChickenIpad(),
+               ),
+               Expanded(
+                 child: TagChickenIpad(),
+               ),
+             ],
+           ),
+         )
+       ],
+     ),
+                    );
+  }
+}
+
+class TagChickenIpad extends StatelessWidget {
+  const TagChickenIpad({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+      height: 50,
+      child: Card(
+        child: Center(
+            child: Text(
+          'Chicken',
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24),
+        )),
+      ),
+    );
+  }
+}
+
+class DescriptionIpad extends StatelessWidget {
+  const DescriptionIpad({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+     child: Padding(
+       padding: EdgeInsets.only(bottom: 15.0, left: 15, right: 15),
+       child: Align(
+         alignment: Alignment.topCenter,
+         child: Text(
+           'En god Kebabrulle som aldrig gör en besviken.',
+           style: TextStyle(
+             color: Colors.white,
+             fontSize: 24,
+           ),
+         ),
+       ),
+     ),
+                    );
+  }
+}
+
+class TitleIpad extends StatelessWidget {
+  const TitleIpad({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+     child: Padding(
+       padding: EdgeInsets.only(top: 10, bottom: 1, left: 15),
+       child: Align(
+         alignment: Alignment.topLeft,
+         child: Text(
+           'Kebabrulle:',
+           style: TextStyle(
+               color: Colors.white,
+               fontSize: 24,
+               fontWeight: FontWeight.bold),
+         ),
+       ),
+     ),
+                    );
   }
 }
 

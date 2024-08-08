@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:halfbaked/components/equipment/equip_ipad.dart';
 import 'package:halfbaked/components/equipment/equip_mobile.dart';
 
 class IngMobile extends StatelessWidget {
