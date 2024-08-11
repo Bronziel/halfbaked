@@ -1,19 +1,41 @@
 import 'package:flutter/material.dart';
-
-class IntroIpad extends StatelessWidget {
-  const IntroIpad({super.key});
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
+class IntroLayout extends StatelessWidget {
+  const IntroLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding:  EdgeInsets.all(8.0),
+    return LayoutBuilder(builder: (context, constraints) {
+      final height = constraints.maxHeight > constraints.maxWidth;
+      if(height){
+        return const IntroIpad();
+      }else{
+        return const IntroIpad(
+          //wide body is pink
+          colorBox: Colors.pink,
+        );
+      }
+      
+    },);
+  }
+}
+class IntroIpad extends StatelessWidget {
+  final Color colorBox;
+  const IntroIpad({super.key,
+  this.colorBox = const Color(0xFF161414)});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Padding(
+      padding:  const EdgeInsets.all(8.0),
       child: AspectRatio(
         aspectRatio: 1,
         child: SizedBox(
           height: double.infinity,
           child: Card(
-            color:  Color(0xFF161414),
-            child: Column(
+            color:  colorBox,
+            child: const Column(
               children: [
                 TitleIpad(),
                 DescriptionIpad(),
