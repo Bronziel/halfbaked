@@ -9,11 +9,13 @@ class IntroLayout extends StatelessWidget {
     return LayoutBuilder(builder: (context, constraints) {
       final height = constraints.maxHeight > constraints.maxWidth;
       if(height){
-        return const IntroIpad();
+        return const Expanded(child: const IntroIpad());
       }else{
-        return const IntroIpad(
-          //wide body is pink
-          colorBox: Colors.pink,
+        return const Expanded(
+          child:  IntroIpad(
+            //wide body is pink
+            colorBox: Colors.pink,
+          ),
         );
       }
       
@@ -27,21 +29,23 @@ class IntroIpad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding:  const EdgeInsets.all(8.0),
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: SizedBox(
-          height: double.infinity,
-          child: Card(
-            color:  colorBox,
-            child: const Column(
-              children: [
-                TitleIpad(),
-                DescriptionIpad(),
-                TimecardCombinedIpad(),
-                 TagIpad()
-              ],
+    return  Center(
+      child: Padding(
+        padding:  const EdgeInsets.all(8.0),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: SizedBox(
+            height: double.infinity,
+            child: Card(
+              color:  colorBox,
+              child: const Column(
+                children: [
+                  TitleIpad(),
+                  DescriptionIpad(),
+                  TimecardCombinedIpad(),
+                   TagIpad()
+                ],
+              ),
             ),
           ),
         ),
