@@ -39,56 +39,57 @@ class _StepsIpadState extends State<StepsIpad> {
                 ),
               ),
             ),
-            SizedBox(
-              width: double.infinity,
-              height: 340,
-              child: ListView(
-                children: const [
-                   SizedBox(
-                    height: 50,
-                    width: double.infinity,
-                    child:  Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        'Prepp',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+            Expanded(
+              child: SizedBox(
+                width: double.infinity,
+                child: ListView(
+                  children: const [
+                    SizedBox(
+                      height: 50,
+                      width: double.infinity,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Prepp',
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child:  Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              '1:',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
+                    SizedBox(
+                      width: double.infinity,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                '1:',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            width: 350,
-                            child: Text(
-                              softWrap: true,
-                              'Börja med att skära upp salladshuvudet. För att sedan sätta det i en plast bunke',
-                              style: TextStyle(
-                                fontSize: 20,
+                            SizedBox(
+                              width: 350,
+                              child: Text(
+                                softWrap: true,
+                                'Börja med att skära upp salladshuvudet. För att sedan sätta det i en plast bunke',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             )
           ],
