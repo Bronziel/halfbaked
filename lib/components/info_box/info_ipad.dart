@@ -1,49 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+
 class IntroLayout extends StatelessWidget {
   const IntroLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      final height = constraints.maxHeight > constraints.maxWidth;
-      if(height){
-        return const Expanded(child: const IntroIpad());
-      }else{
-        return const Expanded(
-          child:  IntroIpad(
-            //wide body is pink
-            colorBox: Colors.pink,
-          ),
-        );
-      }
-      
-    },);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final height = constraints.maxHeight > constraints.maxWidth;
+        if (height) {
+          return const Expanded(child: const IntroIpad());
+        } else {
+          return const Expanded(
+            child: IntroIpad(
+              //wide body is pink
+              colorBox: Colors.pink,
+            ),
+          );
+        }
+      },
+    );
   }
 }
+
 class IntroIpad extends StatelessWidget {
   final Color colorBox;
-  const IntroIpad({super.key,
-  this.colorBox = const Color(0xFF161414)});
+  const IntroIpad({super.key, this.colorBox = const Color(0xFF161414)});
 
   @override
   Widget build(BuildContext context) {
-    return  Center(
+    return Center(
       child: Padding(
-        padding:  const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: AspectRatio(
           aspectRatio: 1,
           child: SizedBox(
             height: double.infinity,
             child: Card(
-              color:  colorBox,
+              color: colorBox,
               child: const Column(
                 children: [
                   TitleIpad(),
                   DescriptionIpad(),
                   TimecardCombinedIpad(),
-                   TagIpad()
+                  TagIpad()
                 ],
               ),
             ),
@@ -62,37 +64,37 @@ class TagIpad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-     width: double.infinity,
-     height: 100,
-     child: Column(
-       children: [
-         Expanded(
-           child: Row(
-             children: [
-               Expanded(
-                 child: TagChickenIpad(),
-               ),
-               Expanded(
-                 child: TagChickenIpad(),
-               ),
-             ],
-           ),
-         ),
-         Expanded(
-           child: Row(
-             children: [
-               Expanded(
-                 child: TagChickenIpad(),
-               ),
-               Expanded(
-                 child: TagChickenIpad(),
-               ),
-             ],
-           ),
-         )
-       ],
-     ),
-                    );
+      width: double.infinity,
+      height: 100,
+      child: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: TagChickenIpad(),
+                ),
+                Expanded(
+                  child: TagChickenIpad(),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: TagChickenIpad(),
+                ),
+                Expanded(
+                  child: TagChickenIpad(),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
 
@@ -109,9 +111,7 @@ class TagChickenIpad extends StatelessWidget {
         child: Center(
             child: Text(
           'Chicken',
-          style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
         )),
       ),
     );
@@ -126,20 +126,20 @@ class DescriptionIpad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-     child: Padding(
-       padding: EdgeInsets.only(bottom: 15.0, left: 15, right: 15),
-       child: Align(
-         alignment: Alignment.topCenter,
-         child: Text(
-           'En god Kebabrulle som aldrig gör en besviken.',
-           style: TextStyle(
-             color: Colors.white,
-             fontSize: 24,
-           ),
-         ),
-       ),
-     ),
-                    );
+      child: Padding(
+        padding: EdgeInsets.only(bottom: 15.0, left: 15, right: 15),
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: Text(
+            'En god Kebabrulle som aldrig gör en besviken.',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
 
@@ -151,23 +151,22 @@ class TitleIpad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-     child: Padding(
-       padding: EdgeInsets.only(top: 10, bottom: 1, left: 15),
-       child: Align(
-         alignment: Alignment.topLeft,
-         child: Text(
-           'Kebabrulle:',
-           style: TextStyle(
-               color: Colors.white,
-               fontSize: 24,
-               fontWeight: FontWeight.bold),
-         ),
-       ),
-     ),
-                    );
+      child: Padding(
+        padding: EdgeInsets.only(top: 10, bottom: 1, left: 15),
+        child: Align(
+          alignment: Alignment.topLeft,
+          child: Text(
+            'Kebabrulle:',
+            style: TextStyle(
+                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+    );
   }
 }
 
+//use layoutbuilder for if returning single or dubble maybe+??
 class TimecardCombinedIpad extends StatelessWidget {
   const TimecardCombinedIpad({
     super.key,
@@ -194,17 +193,15 @@ class TimecardCombinedIpad extends StatelessWidget {
                     ),
                     Text(
                       'Prepp:',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                     ),
                     SizedBox(
                       child: Center(
                         child: Text(
                           '150min',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22),
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                       ),
                     ),
@@ -215,7 +212,7 @@ class TimecardCombinedIpad extends StatelessWidget {
             VerticalDivider(
               color: Colors.grey,
             ),
-            
+
             //second half
             Expanded(
               child: SizedBox(
@@ -229,17 +226,15 @@ class TimecardCombinedIpad extends StatelessWidget {
                     ),
                     Text(
                       'Total:',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                     ),
                     SizedBox(
                       child: Center(
                         child: Text(
                           '450min',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22),
+                              fontWeight: FontWeight.bold, fontSize: 18),
                         ),
                       ),
                     ),

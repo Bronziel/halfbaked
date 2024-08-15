@@ -74,8 +74,7 @@ class _StepsIpadState extends State<StepsIpad> {
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              width: 350,
+                            Expanded(
                               child: Text(
                                 softWrap: true,
                                 'Börja med att skära upp salladshuvudet. För att sedan sätta det i en plast bunke',
