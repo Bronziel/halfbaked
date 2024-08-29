@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:halfbaked/pages/viewRecipe/view_recipe.dart';
+import 'package:halfbaked/try/ipad_pick_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,16 @@ class MyHomePage extends StatelessWidget {
                   ));
             },
             child: const Text('View Recipe'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const IpadPickImage(),
+                  ));
+            },
+            child: const Text('try'),
           ),
           ElevatedButton(
             onPressed: () {},
