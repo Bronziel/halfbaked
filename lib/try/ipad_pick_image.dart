@@ -21,7 +21,17 @@ class _IpadPickImageState extends State<IpadPickImage> {
           _image = image;
         });
       }
-
+     Future getImageFromCamera() async {
+      final XFile? image = await _picker.pickImage(
+      source: ImageSource.camera,
+      imageQuality: 50,
+      maxHeight: 500,
+      maxWidth: 500);
+    
+      setState(() {
+        _image = image;
+      });
+    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +42,7 @@ class _IpadPickImageState extends State<IpadPickImage> {
                 : Image.file(File(_image!.path)),
           ),
           floatingActionButton: FloatingActionButton(
-            onPressed: getImage,
+            onPressed: getImageFromCamera,
             tooltip: 'Pick Image',
             child: const Icon(Icons.add_a_photo),
           ),
