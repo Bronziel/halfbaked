@@ -31,9 +31,9 @@ class _IpadPickImageState extends State<IpadPickImage> {
         maxWidth: 500);
     if (image == null) return null;
     CroppedFile? croppedfile = await ImageCropper().cropImage(
-        sourcePath: image.path,
-        aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 2),
-        compressFormat: ImageCompressFormat.jpg);
+      sourcePath: image.path,
+      aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 2),
+    );
     if (croppedfile == null) return null;
 
     setState(() {
