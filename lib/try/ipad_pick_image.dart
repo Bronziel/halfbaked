@@ -32,7 +32,7 @@ class _IpadPickImageState extends State<IpadPickImage> {
     if (image == null) return null;
     CroppedFile? croppedfile = await ImageCropper().cropImage(
       sourcePath: image.path,
-      aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 2),
+      aspectRatio: const CropAspectRatio(ratioX: 1, ratioY: 2),
     );
     if (croppedfile == null) return null;
 
@@ -45,7 +45,7 @@ class _IpadPickImageState extends State<IpadPickImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pick image'),
+        title: const Text('Pick image'),
       ),
       body: Center(
         child: _image == null

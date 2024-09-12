@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class IntroLayout extends StatelessWidget {
   const IntroLayout({super.key});
@@ -11,13 +9,13 @@ class IntroLayout extends StatelessWidget {
       builder: (context, constraints) {
         final height = constraints.maxHeight > constraints.maxWidth;
         if (height) {
-          return const Expanded(child: const IntroIpad());
+          return const IntroIpad(
+            colorBox: Colors.green,
+          );
         } else {
-          return const Expanded(
-            child: IntroIpad(
-              //wide body is pink
-              colorBox: Colors.pink,
-            ),
+          return const IntroIpad(
+            //wide body is pink
+            colorBox: Colors.pink,
           );
         }
       },
