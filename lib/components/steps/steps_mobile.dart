@@ -7,6 +7,7 @@ class StepsMobile extends StatefulWidget {
   State<StepsMobile> createState() => _StepsMobileState();
 }
 
+//lets see if this works¨
 class _StepsMobileState extends State<StepsMobile> {
   @override
   Widget build(BuildContext context) {
@@ -44,10 +45,10 @@ class _StepsMobileState extends State<StepsMobile> {
               height: 340,
               child: ListView(
                 children: const [
-                   SizedBox(
+                  SizedBox(
                     height: 50,
                     width: double.infinity,
-                    child:  Padding(
+                    child: Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
                         'Prepp',
@@ -60,7 +61,7 @@ class _StepsMobileState extends State<StepsMobile> {
                   ),
                   SizedBox(
                     width: double.infinity,
-                    child:  Padding(
+                    child: Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
