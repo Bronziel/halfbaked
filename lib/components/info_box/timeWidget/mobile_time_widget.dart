@@ -7,6 +7,7 @@ class TimeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const textStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 18);
     return const Row(
       children: [
         Expanded(
@@ -14,26 +15,16 @@ class TimeWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Icon(Icons.schedule),
-                  ),
-                ),
+                TimeIcon(),
                 Column(
                   children: [
                     Text(
                       'Prepp:',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style: textStyle,
                     ),
                     SizedBox(
                       child: Center(
-                        child: Text(
-                          '150min',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
-                        ),
+                        child: Text('150min', style: textStyle),
                       ),
                     ),
                   ],
@@ -52,26 +43,16 @@ class TimeWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Icon(Icons.schedule),
-                  ),
-                ),
+                TimeIcon(),
                 Column(
                   children: [
                     Text(
                       'Total:',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style: textStyle,
                     ),
                     SizedBox(
                       child: Center(
-                        child: Text(
-                          '450min',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
-                        ),
+                        child: Text('150min', style: textStyle),
                       ),
                     ),
                   ],
@@ -81,6 +62,22 @@ class TimeWidget extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class TimeIcon extends StatelessWidget {
+  const TimeIcon({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+      child: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Icon(Icons.schedule),
+      ),
     );
   }
 }
