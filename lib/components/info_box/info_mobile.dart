@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halfbaked/components/info_box/timeWidget/mobile_time_widget.dart';
 
 class IntroMobile extends StatelessWidget {
   const IntroMobile({super.key});
@@ -22,83 +23,7 @@ class IntroMobile extends StatelessWidget {
                       topRight: Radius.circular(10)),
                   color: Color(0xffd9d9d9),
                 ),
-                child: const Row(
-                  children: [
-                    Expanded(
-                      child: SizedBox(
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Icon(Icons.schedule),
-                              ),
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  'Prepp:',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                                SizedBox(
-                                  child: Center(
-                                    child: Text(
-                                      '150min',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    VerticalDivider(
-                      color: Colors.grey,
-                    ),
-
-                    //second half
-                    Expanded(
-                      child: SizedBox(
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Icon(Icons.schedule),
-                              ),
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  'Total:',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                                SizedBox(
-                                  child: Center(
-                                    child: Text(
-                                      '450min',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                child: const TimeWidget(),
               ),
               const SizedBox(
                 child: Padding(

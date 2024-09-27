@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:halfbaked/addaptive/desktop_body.dart';
 import 'package:halfbaked/addaptive/ipad_body.dart';
@@ -76,20 +78,33 @@ class IpadRecipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Expanded(
-          child: Row(
-            children: [
-              IntroLayout(),
-              Expanded(child: CaroIpad()),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Row(
+    double myHeight = MediaQuery.sizeOf(context).height;
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Row(
             children: [
               Expanded(
+                child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                        maxHeight: myHeight * 0.8, maxWidth: double.infinity),
+                    child: IntroLayout()),
+              ),
+              const Expanded(
+                flex: 2,
+                child: const SizedBox(
+                  height: 400,
+                  width: 400,
+                  child: CaroIpad(),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              SizedBox(
+                height: 400,
+                width: 400,
                 child: Column(
                   children: [
                     PortionSizeCardMobile(),
@@ -97,14 +112,15 @@ class IpadRecipe extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
-                flex: 2,
+              SizedBox(
+                width: 400,
+                height: 400,
                 child: StepsIpad(),
               ),
             ],
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

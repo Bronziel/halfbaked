@@ -35,7 +35,7 @@ class IntroIpad extends StatelessWidget {
         child: AspectRatio(
           aspectRatio: 1,
           child: SizedBox(
-            height: double.infinity,
+            width: double.infinity,
             child: Card(
               color: colorBox,
               child: const Column(
