@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:halfbaked/addaptive/desktop_body.dart';
 import 'package:halfbaked/addaptive/ipad_body.dart';
@@ -20,7 +18,6 @@ class ViewRecipe extends StatelessWidget {
   Widget build(BuildContext context) {
     bool mobileScreen = 700 > MediaQuery.sizeOf(context).width;
     bool ipadScreen = 1400 > MediaQuery.sizeOf(context).width;
-    double sizeof = MediaQuery.sizeOf(context).width;
     //bool desktopScreen = 1400 < MediaQuery.sizeOf(context).width;
     //more options for medium sized recipes maybe
 
@@ -88,11 +85,11 @@ class IpadRecipe extends StatelessWidget {
                 child: ConstrainedBox(
                     constraints: BoxConstraints(
                         maxHeight: myHeight * 0.8, maxWidth: double.infinity),
-                    child: IntroLayout()),
+                    child: const IntroLayout()),
               ),
               const Expanded(
                 flex: 2,
-                child: const SizedBox(
+                child: SizedBox(
                   height: 400,
                   width: 400,
                   child: CaroIpad(),
@@ -100,7 +97,7 @@ class IpadRecipe extends StatelessWidget {
               ),
             ],
           ),
-          Row(
+          const Row(
             children: [
               SizedBox(
                 height: 400,
